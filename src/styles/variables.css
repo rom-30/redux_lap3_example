@@ -1,0 +1,6 @@
+:root {
+    --primary: cadetblue;
+    --text-primary: white;
+    --font-primary: monospace;
+    --opacity: rgba(255,255,255,0.5);
+}
