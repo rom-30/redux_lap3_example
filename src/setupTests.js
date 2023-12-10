@@ -2,15 +2,15 @@
 // allows you to do things like:
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
-import '@testing-library/jest-dom';
+import '@testing-library/jest-dom'
 
-import '@testing-library/jest-dom/extend-expect';
+import '@testing-library/jest-dom/extend-expect'
 
 
-import { render } from '@testing-library/react';
-import { Provider } from 'react-redux';
-import { legacy_createStore as createStore, applyMiddleware } from 'redux';
-import { thunk } from 'redux-thunk';
+import { render } from '@testing-library/react'
+import { Provider } from 'react-redux'
+import { legacy_createStore as createStore, applyMiddleware } from 'redux'
+import { thunk } from 'redux-thunk'
 
 import doggosReducer from './reducers/doggoReducer'
 

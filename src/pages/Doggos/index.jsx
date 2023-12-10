@@ -1,17 +1,10 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { DogCard } from '../../components';
-import { fetchDoggos } from '../../actions';
-import './style.css';
+import React from 'react'
+import { DogCard } from '../../components'
+import './style.css'
 
 function Doggos() {
-  const dispatch = useDispatch()
-  const theDogs = useSelector(state => state.doggos)
-  const loading = useSelector(state => state.loading)
-
-  useEffect(() => {
-    dispatch(fetchDoggos())
-  }, [])
+  let theDogs = [{ id: 1, img: '', liked: true }, { id: 1, img: '', liked: false }]
+  let loading = true
 
   const renderDoggos = theDogs.map(dog => <DogCard key={dog.id} doggo={dog} />)
 
@@ -23,9 +16,7 @@ function Doggos() {
           : <section aria-label="doggos" id="doggos">{renderDoggos}</section>
       }
     </>
-  );
+  )
 }
 
 export default Doggos
-
-

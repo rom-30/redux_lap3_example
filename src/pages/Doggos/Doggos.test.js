@@ -1,5 +1,5 @@
-import { screen } from '@testing-library/react';
-import Doggos from '.';
+import { screen } from '@testing-library/react'
+import Doggos from '.'
 
 describe('Doggos', () => {
   /*global renderWithReduxProvider */
@@ -10,7 +10,7 @@ describe('Doggos', () => {
 
     const loadingMsg = screen.getByText(/loading/i)
 
-    expect(loadingMsg).toBeInTheDocument();
+    expect(loadingMsg).toBeInTheDocument()
   })
 
   test('it does not render loading message when loading state is false', () => {
@@ -19,15 +19,15 @@ describe('Doggos', () => {
 
     const loadingMsg = screen.queryByText(/loading/i)
 
-    expect(loadingMsg).not.toBeInTheDocument();
+    expect(loadingMsg).not.toBeInTheDocument()
   })
 
   test('it renders dogs when there are dogs and loading is false', () => {
     const initState = { loading: false, doggos: [{ id: 1, img: 'img.jpg' }] }
     renderWithReduxProvider(<Doggos />, { initState })
 
-    const dogsSection = screen.getByLabelText('doggos')
+    const dogSection = screen.getByLabelText('doggos')
 
-    expect(dogsSection).toBeInTheDocument();
+    expect(dogSection).toBeInTheDocument()
   })
 });

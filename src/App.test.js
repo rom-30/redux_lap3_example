@@ -1,7 +1,7 @@
-import { screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
-import App from './App';
-import axios from 'axios';
+import { screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
+import App from './App'
+import axios from 'axios'
 
 jest.mock('axios')
 axios.get.mockResolvedValue({ data: { message: [] } })

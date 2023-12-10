@@ -1,5 +1,5 @@
-import { screen } from '@testing-library/react';
-import DogCard from '.';
+import { screen } from '@testing-library/react'
+import DogCard from '.'
 
 describe('DogCard', () => {
   /*global renderWithReduxProvider */
@@ -32,4 +32,4 @@ describe('DogCard', () => {
 
     expect(deleteBtn.onclick).toBeInstanceOf(Function)
   })
-});
+})

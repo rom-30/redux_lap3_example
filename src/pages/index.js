@@ -1,1 +1,1 @@
-export { default as Doggos } from './Doggos';
+export { default as Doggos } from './Doggos'
